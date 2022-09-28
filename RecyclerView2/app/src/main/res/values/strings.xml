@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">RecyclerView</string>
+    <string name="app_name">Tulipe</string>
+    <string name="Salutation">Hey Pascarl ,</string>]
+    <string name="abouts">What will you do today?</string>
+    <string name="Transaction1">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction2">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction3">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction4">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction5">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction6">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction7">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction8">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction9">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction10">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction11">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction12">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction13">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction14">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction15">12/09/2022 1900 hrs Kes 3000</string>
+    <string name="Transaction16">12/09/2022 1900 hrs Kes 3000</string>
 </resources>

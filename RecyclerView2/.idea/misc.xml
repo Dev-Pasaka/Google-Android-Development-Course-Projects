@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/drawable/ic_baseline_account_balance_wallet_24.xml" value="0.1055" />
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/drawable/iconsbackground.xml" value="0.1" />
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/drawable/recyclerviewroundconners.xml" value="0.1305" />
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/drawable/roundtextview.xml" value="0.1085" />
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/layout-v28/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/pascarl/Desktop/Android projects/RecyclerView2/app/src/main/res/layout/list_item.xml" value="0.18" />
       </map>
     </option>
   </component>

@@ -4,15 +4,261 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/salutationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/Salutation"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/aboutsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/abouts"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salutationText" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_outline_notifications_24"
+            app:layout_constraintBottom_toBottomOf="@+id/profileContainer"
+            app:layout_constraintEnd_toStartOf="@+id/profileContainer"
+            app:layout_constraintTop_toTopOf="@+id/profileContainer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/roundtextview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_twotone_person_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="26dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            tools:layout_editor_absoluteX="1dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardInfo"
+        android:layout_width="340dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="My total balance"
+                android:textColor="#0B0A0A"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="KES 3000"
+                android:textColor="#0B0A0A"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/activeBalanceIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/ic_baseline_account_balance_wallet_24"
+                app:layout_constraintBottom_toBottomOf="@+id/cardBalanceIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardBalanceIcon" />
+
+            <ImageView
+                android:id="@+id/cardBalanceIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                app:layout_constraintBottom_toBottomOf="@+id/growBalanceIcon"
+                app:layout_constraintEnd_toStartOf="@+id/growBalanceIcon"
+                app:layout_constraintStart_toEndOf="@+id/activeBalanceIcon"
+                app:layout_constraintTop_toBottomOf="@+id/totalBalance" />
+
+            <ImageView
+                android:id="@+id/growBalanceIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_round_show_chart_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalBalance" />
+
+            <TextView
+                android:id="@+id/activeBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Active Balance"
+                android:textColor="#0B0A0A"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/activeBalanceIcon"
+                app:layout_constraintStart_toStartOf="@+id/activeBalanceIcon"
+                app:layout_constraintTop_toBottomOf="@+id/activeBalanceIcon" />
+
+            <TextView
+                android:id="@+id/cardBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Card"
+                android:textColor="#0B0A0A"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardBalanceIcon"
+                app:layout_constraintStart_toStartOf="@+id/cardBalanceIcon"
+                app:layout_constraintTop_toBottomOf="@+id/cardBalanceIcon" />
+
+            <TextView
+                android:id="@+id/growBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Grow"
+                android:textColor="#0B0A0A"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/growBalanceIcon"
+                app:layout_constraintStart_toStartOf="@+id/growBalanceIcon"
+                app:layout_constraintTop_toBottomOf="@+id/growBalanceIcon" />
+
+            <TextView
+                android:id="@+id/activeBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="KES 2000"
+                android:textColor="@color/primaryColor"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/activeBalanceText"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="@+id/activeBalanceText"
+                app:layout_constraintTop_toBottomOf="@+id/activeBalanceText" />
+
+            <TextView
+                android:id="@+id/cardBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="KES 350"
+                android:textColor="@color/primaryColor"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardBalanceText"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="@+id/cardBalanceText"
+                app:layout_constraintTop_toBottomOf="@+id/cardBalanceText" />
+
+            <TextView
+                android:id="@+id/growBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="KES 650"
+                android:textColor="@color/primaryColor"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/growBalanceText"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="@+id/growBalanceText"
+                app:layout_constraintTop_toBottomOf="@+id/growBalanceText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/recentTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Recent Transactions"
+        android:textColor="@color/primaryColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/cardInfo"
+        app:layout_constraintTop_toBottomOf="@+id/cardInfo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionList"
+        android:layout_width="350dp"
+        android:layout_height="360dp"
+        android:layoutAnimation="@anim/layout_animation"
+        android:background="@drawable/recyclerviewroundconners"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/cardInfo"
+        app:layout_constraintStart_toStartOf="@+id/cardInfo"
+        app:layout_constraintTop_toBottomOf="@+id/recentTransactions" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
