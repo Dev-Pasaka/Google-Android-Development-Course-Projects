@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">intents</string>
+    <string name="Guess_a_number">Enter your guess: </string>
+</resources>
